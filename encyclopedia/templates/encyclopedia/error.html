@@ -1,0 +1,19 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+	{% if error == 404 %}
+    	Page Not Found
+    {% elif error == 2 %}
+		Error
+    {% endif %}
+{% endblock %}
+
+{% block body %}
+	{% if error == 404 %}
+    	<h1>Page Not Found</h1>
+    	<h5>The requested page was not found</h5>
+    {% elif error == 2 %}
+		<h1>Encyclopedia entry already exist</h1>
+    	<h5>it is not allowed to create a new page on the subject that it already exists.</h5>
+    {% endif %}
+{% endblock %}

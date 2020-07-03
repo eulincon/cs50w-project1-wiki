@@ -14,17 +14,25 @@
                 <h2>Wiki</h2>
                 <form method="GET" action="{% url 'index' %}">
                     {% csrf_token %}
-                    <input class="search" type="text" name="q" placeholder="Search Encyclopedia">
+                    <input class="search form-control" type="text" name="q" placeholder="Search Encyclopedia">
                 </form>
-                <div>
-                    <a href="{% url 'index' %}">Home</a>
-                </div>
-                <div>
-                    <a href="{% url 'newpage' %}">Create New Page</a>
-                </div>
-                <div>
-                    Random Page
-                </div>
+                <hr/>
+
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="text-dark btn btn-outline-success btn-block border-0" href="{% url 'index' %}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="text-dark btn btn-outline-success btn-block border-0" href="{% url 'newpage' %}">
+                            Create New Page
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="text-dark btn btn-outline-success btn-block border-0" href="{% url 'randompage' %}">
+                            Random Page
+                        </a>
+                    </li>
+                </ul>
                 {% block nav %}
                 {% endblock %}
             </div>

@@ -6,7 +6,8 @@
 
 {% block body %}
 
-    {{ entry|linebreaks|safe }}
-    <a href="editpage/{{title}}">Edit Page</a>
+    {{ entry|safe }}
+    <hr/>
+    <a class="btn btn-primary" href="{% url 'editpage' title %}">Edit Page</a>
     
 {% endblock %}
