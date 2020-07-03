@@ -1,11 +1,12 @@
 {% extends "encyclopedia/layout.html" %}
 
 {% block title %}
-    CSS
+    {{title}}
 {% endblock %}
 
 {% block body %}
 
     {{ entry|linebreaks|safe }}
+    <a href="editpage/{{title}}">Edit Page</a>
     
 {% endblock %}
