@@ -1,1 +1,1 @@
-django-markdown
+markdown2

@@ -31,7 +31,6 @@ def newpage(request):
 
 def entry(request, entry):
 	content = util.get_entry(entry)
-	#return HttpResponse(request.handler404)
 	if content:
 		html = markdown2.markdown(content)
 		return render(request, 'encyclopedia/entry.html', {
